@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>Vowel</title>
+		
+	</head>
+	<body>
+		<script type="text/javascript">
+		function start() {
+			var str = document.getElementById("box").value;
+			var rev=0, n;
+			if(Number.isNaN(str))
+			{
+				var n = str.length, a = 0;
+				for(var i = 0; i < n; i ++)
+				{
+					if(str.charAt[i] == 'a' || str.charAt[i] == 'e' || str.charAt[i] == 'i' || str.charAt[i] == 'o' || str.charAt[i] == 'u')
+					{
+						i = i + 1;
+						a = 0;
+						document.write("<p>Vowel is found at the position " + i+"</P>");
+						break;
+						}
+						else { a = 1; }
+				}
+				if(a == 1) 
+				{ document.write("<p>Vowels is not found </p>");
+			}
+			else
+			{
+				str = parseInt(str);
+				while(str > 0)
+				{
+					n = str % 10;
+					str = str / 10;
+					rev = rev * 10 + n;
+				}
+				document.write("<p>Revesre of the number is " + rev + "</p>");
+			}
+			}
+			
+		</script>
+		
+		<input type = "text" id="box" name = "string" >
+		<input type = "button" value="submit" OnClick="start()">
+	</body>
+</html>
